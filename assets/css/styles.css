@@ -140,16 +140,14 @@ h2 {
   overflow: hidden;
 }
 
+
 .project-image {
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1c3948, #14202e);
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #101c29;
   border-bottom: 1px solid var(--border);
-  color: var(--cyan);
-  font-weight: 700;
-  letter-spacing: .04em;
 }
 
 .project-content { padding: 27px; }
@@ -213,4 +211,19 @@ h3 { font-size: 1.5rem; margin: 10px 0; }
   .project-grid { grid-template-columns: 1fr; }
   .project-image { min-height: 190px; }
   .work-section { padding: 65px 0; }
+}
+
+/* Portfolio screenshots */
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.035);
 }
